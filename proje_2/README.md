@@ -43,13 +43,14 @@ Madde-10: 'Runtime' değeri en yüksek olan ilk 10 film hangileridir? Görselle�
 Madde-9'daki işlemlere benzer işlemler gerçekleştildi ve görselleştirme yapıldı.
 
 Madde-11: 11 Hangi yılda en fazla film yayımlanmıştır? Görselleştiriniz.
+  count ile bir yıl içerisinde yayınlanan film adet sayısını buluyoruz Bulunan film  yapısının veri türü pandas.series olduğu için sort_values() ile sıralamasını yapıyoruz. Ardından plot ile film adet sayısı ve yillarin grafiğini çiziyoruz
 
 
 Madde-12: Hangi dilde yayımlanan filmler en düşük ortalama IMBD puanına sahiptir? Görselleştiriniz.
-
+ount ile bir yıl içerisinde yayımlanan filmlerin IMDB skoruna göre Diller ayrıştırımını yapıyoruz. pandas.series olduğu için sort_values() ile sıralamasını yapıyoruz.ascending=True yaparak sıralamayı küçükten büyüge doğru sıralıyoruz ve plot.pie ile pasta grafiği oluşturuyoruz
 
 Madde-13: Hangi yılın toplam "runtime" süresi en fazladır?
-
+Sum() ile aynı yıllar içerisinde "Runtime" sürelerini topluyoruz. Toplanılan bu sürelerden sonra  pandas.series olduğu için sort_values() ile sıralamasını yapıyoruz.ascending=False yaparak sıralamayı Büyükten  küçüge doğru sıralıyoruz ve ekrana basıyoruz
 
 Madde-14: Her bir dilin en fazla kullanıldığı "Genre" nedir?
 diller_kümesi=set() adında bir küme oluşturduk.
