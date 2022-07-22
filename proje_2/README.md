@@ -57,9 +57,12 @@ diller_kümesi=set() adında bir küme oluşturduk.
 İkinci for döngüsünde dil kümesindeki her bir dil üzerinde gezinerek o dile ait en fazla tür tespit edildi.
 
 Madde-15: Veri setinde outlier veri var mıdır? Açıklayınız.
+mean_runtime_hindi=veri[veri['Language']=='Hindi'] ve mean_runtime_hindi=veri[veri['Language']=='Dutch'] ile Hindi ve Dutch dillerine ait veriler dataframe'den çekildi. 
+ortalama_süre_hindi = mean_runtime_hindi.mean(axis=0) ve ortalama_süre_dutch = mean_runtime_dutch.mean(axis=0) ile dillere ait filmlerin ortalama runtime süreleri hesaplandı. 
+x1=mean_runtime_hindi['Runtime']    bu kodla 'x' ekseninde yer alacak olan veri alındı ve değişkene atandı
+y1=mean_runtime_hindi['IMDB Score'] bu kodla 'y' ekseninde yer alacak olan veri alındı ve değişkene atandı
+x2=mean_runtime_dutch['Runtime']    bu kodla 'x' ekseninde yer alacak olan veri alındı ve değişkene atandı
+y2=mean_runtime_dutch['IMDB Score'] bu kodla 'y' ekseninde yer alacak olan veri alındı ve değişkene atandı
 
-
-
-
-
+Daha sonra bu veriler grafiğe dökülerek değerlendirme yapıldı.
 
