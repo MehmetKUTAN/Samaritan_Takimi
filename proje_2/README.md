@@ -6,3 +6,19 @@ Madde-2: 2019 Ocak ile 2020 Haziran tarihleri arasında 'Documentary' türünde 
 Tarih(Premiere) sütunundaki veri tarih formatına çavirildi (Örneğin 2020-05-25 formatına). Sonra istenen aralıktaki veri alınıp görselleştirildi.
 
 Madde-3: İngilizce çekilen filmler içerisinde hangi tür en yüksek IMDB puanına sahiptir?
+english_max_imdb=veri[veri['Language']=='English'] koduyla İngilizce diilindeki filmler ayrıştırıldı. 
+max_imdb = english_max_imdb.max() koduyla da en yüksek IMDB puanlı tür tespit edildi.
+
+Madde-4: 'Hindi' Dilinde çekilmiş olan filmlerin ortalama 'runtime' suresi nedir?
+mean_runtime=veri[veri['Language']=='Hindi'] koduyla Hindi dilindeki filmler dataframe'den ayrıştırıldı.
+ortalama_süre = mean_runtime.mean(axis=0) koduyla ortalama Runtime süresi hesaplandı.
+
+Madde-5: 'Genre' Sütunu kaç kategoriye sahiptir ve bu kategoriler nelerdir? Görselleştirerek ifade ediniz.
+türler=veri['Genre'].value_counts() koduyla Genre sütunundaki tür sayısı hesaplandı ve türler adındaki değişkene atandı.
+türler.plot.pie(subplots=True, figsize=(30, 30)) koduyla türler bir pasta grafiğine döküldü.
+
+Madde-6: Veri setinde bulunan filmlerde en çok kullanılan 3 dili bulunuz.
+ilk_3_dil=veri['Language'].value_counts() koduyla datafram'deki diller kullanıldığı film sayısına göre listelendi.
+ilk_3_dil.head(3) koduyla ilk 3 sırada yer alan diller tespit edildi.
+
+Madde-7: IMDB puanı en yüksek olan ilk 10 film hangileridir?
