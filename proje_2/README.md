@@ -22,3 +22,21 @@ ilk_3_dil=veri['Language'].value_counts() koduyla datafram'deki diller kullanıl
 ilk_3_dil.head(3) koduyla ilk 3 sırada yer alan diller tespit edildi.
 
 Madde-7: IMDB puanı en yüksek olan ilk 10 film hangileridir?
+veri.sort_values(by=['IMDB Score']) koduyla İMDB puanına göre filmler sıralandı.
+ilk_10_imdb=veri.tail(10) koduyla ilk 10'daki filmler alındı.
+
+Madde-8: IMDB puanı ile 'Runtime' arasında nasıl bir korelasyon vardır? İnceleyip görselleştiriniz.
+import scipy.stats as stats ile scipy kütüphanesi koda dahil edildi.
+import numpy as np ile numpy kütüphanesi koda dahil edildi.
+import seaborn as sns ile seaborn kütüphanesi koda dahil edildi.
+Gerekli kodlar yazılıp görselleştirme yapılarak sonuçlar gösterildi.
+
+Madde-9: IMDB Puanı en yüksek olan ilk 10 'Genre' hangileridir? Görselleştiriniz.
+sort_list=[] adında boş bir liste oluşturuldu
+imdb=veri['IMDB Score'] ve Genre=veri['Genre'] kodlarıyla Genre ve IMDB Score sütunlarına göre dataframe'den veri çekildi.
+
+
+
+
+
+
