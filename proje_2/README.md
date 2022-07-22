@@ -34,6 +34,29 @@ Gerekli kodlar yazılıp görselleştirme yapılarak sonuçlar gösterildi.
 Madde-9: IMDB Puanı en yüksek olan ilk 10 'Genre' hangileridir? Görselleştiriniz.
 sort_list=[] adında boş bir liste oluşturuldu
 imdb=veri['IMDB Score'] ve Genre=veri['Genre'] kodlarıyla Genre ve IMDB Score sütunlarına göre dataframe'den veri çekildi.
+for i in range(len(imdb)) koduyla imdb sütununun uzunluğu miktarında bir sayı dizisi oluşturularak üzerinde gezinildi ve bu sayılar İMDB Score ile Genre sütunundaki
+verilerin indeksleri olarak kullanılıp o indekslerdeki verileri alındı. Bu veriler oluşturulan listeye sözlük içerisinde çiftler olarak aktarıldı. Daha sonra bu listede ilk ondaki imdb puanları sıralandı. key=[] ve values=[] listeleri oluşturuldu.
+for i in range(len(top_10)): kodu ile 10 adet sayı barındıran bir sayı dizisi oluşturup üzerinde gezinildi ve i değişkenine atandı. key.append(top_10[i]['imdb']) ve
+values.append(top_10[i]['Genre']) kodlarıyla da i'inci indeksteki verileri alınıp daha önce oluşturulan listelere eklendi. Daha sonra gerekli veriler grafiğe döküldü.
+
+Madde-10: 'Runtime' değeri en yüksek olan ilk 10 film hangileridir? Görselleştiriniz.
+Madde-9'daki işlemlere benzer işlemler gerçekleştildi ve görselleştirme yapıldı.
+
+Madde-11: 11 Hangi yılda en fazla film yayımlanmıştır? Görselleştiriniz.
+
+
+Madde-12: Hangi dilde yayımlanan filmler en düşük ortalama IMBD puanına sahiptir? Görselleştiriniz.
+
+
+Madde-13: Hangi yılın toplam "runtime" süresi en fazladır?
+
+
+Madde-14: Her bir dilin en fazla kullanıldığı "Genre" nedir?
+diller_kümesi=set() adında bir küme oluşturduk.
+İlk for döngüsünde her dilin bir kez bulunduğu ve her dili barındıran küme elemanı oluşturuldu.
+İkinci for döngüsünde dil kümesindeki her bir dil üzerinde gezinerek o dile ait en fazla tür tespit edildi.
+
+Madde-15: Veri setinde outlier veri var mıdır? Açıklayınız.
 
 
 
