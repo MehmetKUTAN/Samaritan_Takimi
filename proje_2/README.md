@@ -88,12 +88,12 @@ Madde-14: Her bir dilin en fazla kullanıldığı "Genre" nedir?
 Madde-15: Veri setinde outlier veri var mıdır? Açıklayınız.
     
     
-            mean_runtime_hindi=veri[veri['Language']=='Hindi'] ve mean_runtime_hindi=veri[veri['Language']=='Dutch'] mean_runtime_english=veri[veri['Language']=='English'] ile Hindi, Dutch ve English dillerine ait veriler dataframe'den çekildi. 
-            ortalama_süre_hindi = mean_runtime_hindi.mean(axis=0) ve ortalama_süre_dutch = mean_runtime_dutch.mean(axis=0) ile dillere ait filmlerin ortalama runtime süreleri hesaplandı. 
-        data1=mean_runtime_hindi['Runtime']
-        data2=mean_runtime_dutch['Runtime']
-        data3=mean_runtime_english['Runtime'] , bu üç satur kodla y ekseninde yer alacak Runtime süreleri değişkenlere atandı.
-        fig = plt.figure(figsize =(14, 12)) --->14x2 'lik grafik alanı oluşturuldu.    
-        bp = ax.boxplot(data) ---> kutu grafiğ oluşturuldu,
+    mean_runtime_hindi=veri[veri['Language']=='Hindi'] ve mean_runtime_hindi=veri[veri['Language']=='Dutch'] mean_runtime_english=veri[veri['Language']=='English'] ile Hindi, Dutch ve English dillerine ait veriler dataframe'den çekildi. 
+    ortalama_süre_hindi = mean_runtime_hindi.mean(axis=0) ve ortalama_süre_dutch = mean_runtime_dutch.mean(axis=0) ile dillere ait filmlerin ortalama runtime süreleri hesaplandı. 
+    data1=mean_runtime_hindi['Runtime']
+    data2=mean_runtime_dutch['Runtime']
+    data3=mean_runtime_english['Runtime'] , bu üç satur kodla y ekseninde yer alacak Runtime süreleri değişkenlere atandı.
+    fig = plt.figure(figsize =(14, 12)) --->14x2 'lik grafik alanı oluşturuldu.    
+    bp = ax.boxplot(data) ---> kutu grafiğ oluşturuldu,
 
-        Kutu grafiğindeki verilere göre Hindi ve Enhlish dillerinde outlier veri tespit edildi.
+    Kutu grafiğindeki verilere göre Hindi ve Enhlish dillerinde outlier veri tespit edildi.
